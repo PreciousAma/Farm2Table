@@ -49,7 +49,6 @@
   </script>
 </head>
 <header>
-  <div>
     <nav id="navlink">
       <ul class="navbar">
         <li>
@@ -69,19 +68,16 @@
         </li>
       </ul>
     </nav>
-  </div>
-
 </header>
 
 <body>
-  <aside>
+  <aside class="aside">
     <img id="logo" src="https://s3.amazonaws.com/logosnap/logos/2021/Jun/original-4361-60be57aa58e79wm.png"
       alt="farm2table_logo">
-    <p id="slogan">The World's Farmacy</p>
   </aside>
   <main>
 
-    <h1 id="welcome">Welcome!</h1>
+    <h1 id="welcome" class="section-title">Welcome!</h1>
     <p>
       Once again, welcome to Farm2Table, the "farmacy" you can trust! We are glad to have you here. At
       Farm2Table, we help farmers showcase their produce. As a farmer,
@@ -93,7 +89,7 @@
     <br>
     <br>
 
-    <h1 id="about">About</h1>
+    <h1 id="about" class="section-title">About</h1>
     <p>
       According to the UN, the world is not on track to achieve Zero Hunger
       by 2030. 840 million will be affected by world hunger - a rise from
@@ -109,63 +105,97 @@
     <br>
     <br>
 
-    <h1 id="general_market">General Market</h1>
-    <h3>Grains</h3><br>
-    <img
-      src="https://www.world-grain.com/ext/resources/Article-Images/2020/02/Focus-on-Uzbekistan_wholegrains_shutterstock_Nov-2014_E.jpg?t=1580745162&width=1080"
-      width="400px" alt="Grains">
-    <p>Our farmers deal in grains ranging from rice, millets, maize, soya.</p><br><br>
-    <h3>Vegetables</h3><br>
-    <img
-      src="https://previews.123rf.com/images/merc67/merc671411/merc67141100301/33934404-farm-fresh-vegetables-on-table.jpg"
-      width="400px" alt="Vegetables">
-    <p>Also avaialble are varieties of fresh vegetables.</p><br><br>
-    <h3>Tubers</h3><br>
-    <img src="https://image.shutterstock.com/image-photo/tuber-crop-260nw-347346557.jpg" alt="Tubers"><br>
-    <p>What are lawyers if they are not called tuber?</p><br><br>
-    <h3>Fruits</h3><br>
-    <img src="https://i.pinimg.com/originals/4d/9a/71/4d9a712dfeadd3cb26acd602b643aa10.jpg" width="400px"
-      alt="Fruits"><br>
-    <p>Our very good source of vitamins are here!</p>
-    <br>
-    <br>
+    <div>
+      <h1 id="general_market" class="section-title">General Market</h1>
+      <div class="container">
+        <div class="card">
+          <div class="imgBx">
+            <img
+              src="https://www.world-grain.com/ext/resources/Article-Images/2020/02/Focus-on-Uzbekistan_wholegrains_shutterstock_Nov-2014_E.jpg?t=1580745162&width=1080"
+              width="400px" alt="Grains">
+          </div>
+          <div class="content">
+            <h3>Grains</h3><br>
+            <p>Our farmers deal in grains ranging from rice, millets, maize, soya.</p><br><br>
+          </div>
+        </div>
+  
+        <div class="card">
+          <div class="imgBx">
+  
+            <img
+              src="https://previews.123rf.com/images/merc67/merc671411/merc67141100301/33934404-farm-fresh-vegetables-on-table.jpg"
+              width="400px" alt="Vegetables">
+          </div>
+          <div class="content">
+            <h3>Vegetables</h3><br>
+            <p>Also avaialble are varieties of fresh vegetables.</p><br><br>
+          </div>
+        </div>
+  
+        <div class="card">
+          <div class="imgBx">
+  
+            <img src="https://image.shutterstock.com/image-photo/tuber-crop-260nw-347346557.jpg" alt="Tubers"><br>
+          </div>
+          <div class="content">
+            <h3>Tubers</h3><br>
+            <p>What are lawyers if they are not called tuber?</p><br><br>
+          </div>
+        </div>
+  
+        <div class="card">
+          <div class="imgBx">
+            <img src="https://i.pinimg.com/originals/4d/9a/71/4d9a712dfeadd3cb26acd602b643aa10.jpg" width="400px"
+              alt="Fruits"><br>
+          </div>
+          <div class="content">
+            <h3>Fruits</h3><br>
+            <p>Our very good source of vitamins are here!</p>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="join">
-      <h1 id="join_us">Join Us</h1>
+      <h1 id="join_us"nclass="section-title">Join Us</h1>
       <p>If you want to be a part of this wonderful market, register with us</p><br>
-        <form onsubmit="return validate()" action="welcome.html" class="form">
-          <input id="name" type="text" placeholder="Enter Your Name"><br>
-          <input id="mail" type="email" placeholder="Enter your Email"><br>
-          <input id="pass" type="password" placeholder="Choose a password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-            required><br>
-          <input id="address" type="adress" placeholder="Enter Your Address"><br>
-          <div id="message">
-            <p class="text">Password must contain the following: A lowercase letter, a capital(uppercase)letter, a number, Minimum 8 characters</p>
-          </div>
-          <div>
-            <!--Take note of the DOM Manipulation in this section-->
-            <p><strong>Have you used any online platform to advertise your produce?</strong></p>
-            <label id="radio" for="yes" class="option">Yes</label>
-            <input class="radio" id="rdbtn1" name="group" type="radio" value="yes">
-            <!--The id was included for the getElementById-->
-            <label for="no" class="option">No</label>
-            <input class="radio" id="rdbtn2" name="group" type="radio" value="no"><br><br>
-            <!--that name attribute is what prevents the user from being able to click on the two buttons since they are the same. If the names are different or are not there, it would be possible to click both-->
-          </div>
-          <div>
-            <p><strong>What kind of crop do you grow?</strong></p>
-            <label class="option" for="grains">Grains</label>
-            <input type="checkbox" value="grains"><br>
-            <label class="option" for="vegetables">Vegetables</label>
-            <input id="vegetables" type="checkbox" value="vegetables"> <br>
-            <label class="option" for="tubers">Tubers</label>
-            <input type="checkbox" value="tubers"><br>
-            <label class="option" for="fruits">Fruits</label>
-            <input type="checkbox" value="fruits">
-          </div>
-          <button onclick="return ftn1() " type="submit" id="btn" class="btn"><strong>Submit</strong></button>
-        </form>
+      <form onsubmit="return validate()" action="welcome.html" class="form">
+        <input id="name" type="text" placeholder="Enter Your Name"><br>
+        <input id="mail" type="email" placeholder="Enter your Email"><br>
+        <input id="pass" type="password" placeholder="Choose a password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+          required><br>
+        <input id="address" type="adress" placeholder="Enter Your Address"><br>
+        <div id="message">
+          <p class="text">Password must contain the following: A lowercase letter, a capital(uppercase)letter, a number,
+            Minimum 8 characters</p>
+        </div>
+        <div>
+          <!--Take note of the DOM Manipulation in this section-->
+          <p><strong>Have you used any online platform to advertise your produce?</strong></p>
+          <label id="radio" for="yes" class="option">Yes</label>
+          <input class="radio" id="rdbtn1" name="group" type="radio" value="yes">
+          <!--The id was included for the getElementById-->
+          <label for="no" class="option">No</label>
+          <input class="radio" id="rdbtn2" name="group" type="radio" value="no"><br><br>
+          <!--that name attribute is what prevents the user from being able to click on the two buttons since they are the same. If the names are different or are not there, it would be possible to click both-->
+        </div>
+        <div>
+          <p><strong>What kind of crop do you grow?</strong></p>
+          <label class="option" for="grains">Grains</label>
+          <input type="checkbox" value="grains"><br>
+          <label class="option" for="vegetables">Vegetables</label>
+          <input id="vegetables" type="checkbox" value="vegetables"> <br>
+          <label class="option" for="tubers">Tubers</label>
+          <input type="checkbox" value="tubers"><br>
+          <label class="option" for="fruits">Fruits</label>
+          <input type="checkbox" value="fruits">
+        </div>
+        <button onclick="return ftn1() " type="submit" id="btn" class="btn"><strong>Submit</strong></button>
+      </form>
     </div>
 
   </main>
@@ -193,11 +223,11 @@
         </ul>
     </nav><br> -->
   </div>
-  <p style="text-align: center;">You can contact us at <br>Tel.No: +254 456 7683 388596.<br>Address: Head Office at 9.
+  <p class="footer-text">You can contact us at <br>Tel.No: +254 456 7683 388596.<br>Address: Head Office at 9.
     Freedom Park, Gigiri, Nairobi, Kenya; Branch Office at 10, Allen Avenue, Ikeja, Lagos.
   </p>
 
-  <a id="logodesign" href=null>Logo source Logodesign.net</a>
+  <span id="logodesign">Programming queens-Team - Copyright &copy; 2021</span>
 </footer>
 
 </html>
