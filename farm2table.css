@@ -10,54 +10,88 @@ body{
 }
 
 header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
-    width: 100%;
+    /* width: 100%; */
     background-color: rgb(39, 87, 39);
     padding: 10px;
     z-index: 1;
 }
 
-nav a:visited,
-nav a:link {
+.logo-container {
+    width: 40px;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+ }
+
+.navbar {
+    overflow: hidden;
+    position: relative;
+}
+
+.navbar a:visited,
+.navbar a:link {
     color: white;
     text-decoration: none;
+    display: block;
 }
-nav .navbar {
+
+.navbar .icon {
+    font-size: 20px;
+    position: absolute;
+    top: -2px;
+    right: 0;
+    color: #FFFFFF;
+    z-index: 1000;
+}
+
+#navlinks  {
+    display: none;
+    list-style: none;
+    text-align: center;
+}
+
+#navlinks .navlink {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#navlinks .navlink:not(:last-of-type) {
+    border-bottom: 1px solid lavender;
+}
+
+
+/* .navbar .navlinks {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
 }
 
-.navbar li {
+.navlinks li {
     display: inline-block;
     list-style: none;
-}
-.navbar > li:not(:last-child){
+} */
+/* .navlinks > li:not(:last-child){
     margin-right: 20px;
+} */
+
+
+.section-title {
+    text-align: center;
 }
 
-.aside {
-    position: fixed;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    max-width: 100px;
-}
-
-#logo {
-    border-radius: 50%;
-    height: auto;
-    width: 100%;
-    margin-left: 5px;
-    margin-bottom: 5px; 
+.section-texts {
+    text-align: center;
 }
 
 main {
     padding-left: 24px;
     padding-right: 24px;
-    margin-top: 120px;
+    margin-top: 40px;
     line-height: 1.5;
     color: forestgreen;
 }

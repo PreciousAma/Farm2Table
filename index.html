@@ -6,79 +6,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Farm2Table</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css" integrity="sha512-jQqzj2vHVxA/yCojT8pVZjKGOe9UmoYvnOuM/2sQ110vxiajBU+4WkyRs1ODMmd4AfntwUEV4J+VfM6DkfjLRg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" type="text/css" href="farm2table.css">
-  <script>
-
-    function ftn1() {
-      var rdbtn1 = document.getElementById("rdbtn1");
-      var rdbtn2 = document.getElementById("rdbtn2");
-
-      if (rdbtn1.checked == true) {
-        alert("The channel selected is " + rdbtn1.value);
-        return true;
-      } else if (rdbtn2.checked == true) {
-        alert("The channel selected is " + rdbtn2.value);
-        return true;
-      } else {
-        alert("No channel selected");
-        return false;
-      }
-    }
-    function validate() {
-      var name = document.getElementById("name");
-      var mail = document.getElementById("mail");
-      var password = document.getElementById("pass");
-      var address = document.getElementById("address");
-
-      if (name.value.trim() == "") {
-        alert("Name cannot be blank");
-        return false;
-      } else if (mail.value.trim() == "") {
-        alert("Mail cannot be blank");
-        return false;
-      } else if (password.value.trim().length < 5) {
-        alert("Password is too short");
-        return false;
-      } else if (address.value == "") {
-        alert("Address is required");
-        return false;
-      } else {
-        return true;
-      }
-    }
-  </script>
 </head>
 <header>
-    <nav id="navlink">
-      <ul class="navbar">
-        <li>
+    <nav class="navbar">
+      <a href="welcome.html"class="logo-container" ><img id="logo" class="logo" src="./Images/logo.png" alt="farm2table_logo"></a>
+      <ul id="navlinks">
+        <li class="navlink">
           <a href="#welcome">Welcome</a>
         </li>
-        <li>
+        <li class="navlink">
           <a href="#about">About</a>
         </li>
-        <li>
+        <li class="navlink">
           <a href="#general_market">General Market</a>
         </li>
-        <li>
+        <li class="navlink">
           <a href="#join_us">Join Us</a>
         </li>
-        <li>
+        <li class="navlink">
           <a href="buynow.html">Buy Now</a>
         </li>
       </ul>
+      <span class="icon" id="click">
+        <i class="fas fa-bars"></i>
+      </span>
     </nav>
 </header>
 
 <body>
-  <aside class="aside">
-    <img id="logo" src="https://s3.amazonaws.com/logosnap/logos/2021/Jun/original-4361-60be57aa58e79wm.png"
-      alt="farm2table_logo">
-  </aside>
   <main>
 
     <h1 id="welcome" class="section-title">Welcome!</h1>
-    <p>
+    <p class="section-texts">
       Once again, welcome to Farm2Table, the "farmacy" you can trust! We are glad to have you here. At
       Farm2Table, we help farmers showcase their produce. As a farmer,
       you'll be able to enjoy and access a bigger market, not just locally.
@@ -90,7 +52,7 @@
     <br>
 
     <h1 id="about" class="section-title">About</h1>
-    <p>
+    <p class="section-texts">
       According to the UN, the world is not on track to achieve Zero Hunger
       by 2030. 840 million will be affected by world hunger - a rise from
       the current 690 million. To help relieve this peril we would need to
@@ -199,35 +161,13 @@
     </div>
 
   </main>
-
+  <footer>
+    <p class="footer-text">You can contact us at <br>Tel.No: +254 456 7683 388596.<br>Address: Head Office at 9.
+      Freedom Park, Gigiri, Nairobi, Kenya; Branch Office at 10, Allen Avenue, Ikeja, Lagos.
+    </p>
+  
+    <span id="logodesign">Programming queens-Team - Copyright &copy; 2021</span>
+  </footer>
+  <script type="text/javascript" src="./script.js"></script>
 </body>
-<footer>
-  <div>
-    <!-- <nav id="navlink">
-        <ul class="navbar">
-            <li>
-                <a href="#welcome">Welcome</a>
-            </li>
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#general_market">General Market</a>
-            </li>
-            <li>
-                <a href="#join_us">Join Us</a>
-            </li>
-            <li>
-                  <a href="buynow.html">Buy Now</a>
-                </li>
-        </ul>
-    </nav><br> -->
-  </div>
-  <p class="footer-text">You can contact us at <br>Tel.No: +254 456 7683 388596.<br>Address: Head Office at 9.
-    Freedom Park, Gigiri, Nairobi, Kenya; Branch Office at 10, Allen Avenue, Ikeja, Lagos.
-  </p>
-
-  <span id="logodesign">Programming queens-Team - Copyright &copy; 2021</span>
-</footer>
-
 </html>
