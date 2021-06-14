@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,42 +9,52 @@
     <link rel="stylesheet" type="text/css" href="farm2table.css">
     <style>
         @media only screen and (min-width: 768px) {
-       
-        .grains {
-            display: flex;
+
+            .grains {
+                display: flex;
+            }
+
+            .vegetables {
+                display: flex;
+            }
+
+            .tubers {
+                display: inline-flex;
+            }
+
+            .fruits {
+                display: flex;
+            }
         }
-        .vegetables {
-            display: flex;
+
+        .navbar>li {
+            padding-left: 100px;
+            padding-right: 100px;
         }
-       .tubers {
-           display: inline-flex;
-       }
-        .fruits {
-            display: flex;
-        }
-    }
-    .navbar > li{
-    padding-left: 100px;
-    padding-right: 100px;
-}
+
         body {
             padding-left: 20px;
         }
+
         h1 {
             margin-top: 150px;
             color: darkolivegreen;
             font-weight: bold;
         }
+
         h3 {
             color: darkolivegreen;
             font-weight: bold;
         }
+
         .images {
             border: solid 5px rgb(91, 172, 10);
         }
+
         .column {
             display: flex;
         }
+
         .grains {
             width: 1200px;
             padding: 20px;
@@ -52,328 +63,359 @@
             border: solid 3px lawngreen;
             border-radius: 25px;
         }
-    .vegetables {
+
+        .vegetables {
             width: 1200px;
             padding: 20px;
             margin: 20px;
             background-color: silver;
-            border: solid 3px lawngreen; 
+            border: solid 3px lawngreen;
             border-radius: 25px;
-    }
-    .tubers {
+        }
+
+        .tubers {
             width: 1200px;
             padding: 20px;
             margin: 10px;
             background-color: silver;
             border-radius: 25px;
             border: solid 1px lawngreen;
-    }
-    .fruits {
+        }
+
+        .fruits {
             width: 1200px;
             padding: 10px;
             margin: 10px;
             background-color: silver;
             border: solid 3px lawngreen;
             border-radius: 25px;
-        
-    }
-    .grains .title {
-        font-weight: bold;
-    }
-    .grains .contact {
-        font-weight: bold;
-    }
-    .grains .price {
-        text-align: right;
-    }
-    .grains .column div {
-        width: 30%;
-        margin-right: 70px;
-    }
-    .grains button {
-        background-color: lightseagreen;
-        padding: 10px;
-        border: solid 1px lightseagreen;
-        border-radius: 3px;
-        color: white;
-    }
-    /*Vegetables*/
-    .vegetables .title {
-        font-weight: bold;
-    }
-    .vegetables .contact {
-        font-weight: bold;
-    }
-    .vegetables .price {
-        text-align: right;
-    }
-    .vegetables .column div {
-        width: 30%;
-        margin-right: 70px;
-    }
-    .vegetables button {
-        background-color: lightseagreen;
-        padding: 10px;
-        border: solid 1px lightseagreen;
-        border-radius: 3px;
-        color: white;
-    }
-    /*Tubers*/
-    .tubers .title {
-        font-weight: bold;
-    } 
-    .tubers .contact {
-        font-weight: bold;
-    }
-    .tubers .price {
-        text-align: center;
-        margin-right: 10px;
-    }
-    .tubers .column div {
-        width: 30%;
-        padding-right: 100px;
-    }
-    .tubers button {
-        background-color: lightseagreen;
-        padding: 10px;
-        border: solid 1px lightseagreen;
-        border-radius: 3px;
-        color: white;
-    }
-     /*Fruits*/
-     .fruits .title {
-        font-weight: bold;
-     }
-     .fruits .contact {
-        font-weight: bold;
-    }
-    .fruits .price {
-        text-align: right;
-    }
-    .fruits .column div {
-        width: 30%;
-        margin-right: 50px;
-    }
-    .fruits button {
-        background-color: lightseagreen;
-        padding: 10px;
-        border: solid 1px lightseagreen;
-        border-radius: 3px;
-        color: white;
-    }
+
+        }
+
+        .grains .title {
+            font-weight: bold;
+        }
+
+        .grains .contact {
+            font-weight: bold;
+        }
+
+        .grains .price {
+            text-align: right;
+        }
+
+        .grains .column div {
+            width: 30%;
+            margin-right: 70px;
+        }
+
+        .grains button {
+            background-color: lightseagreen;
+            padding: 10px;
+            border: solid 1px lightseagreen;
+            border-radius: 3px;
+            color: white;
+        }
+
+        /*Vegetables*/
+        .vegetables .title {
+            font-weight: bold;
+        }
+
+        .vegetables .contact {
+            font-weight: bold;
+        }
+
+        .vegetables .price {
+            text-align: right;
+        }
+
+        .vegetables .column div {
+            width: 30%;
+            margin-right: 70px;
+        }
+
+        .vegetables button {
+            background-color: lightseagreen;
+            padding: 10px;
+            border: solid 1px lightseagreen;
+            border-radius: 3px;
+            color: white;
+        }
+
+        /*Tubers*/
+        .tubers .title {
+            font-weight: bold;
+        }
+
+        .tubers .contact {
+            font-weight: bold;
+        }
+
+        .tubers .price {
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        .tubers .column div {
+            width: 30%;
+            padding-right: 100px;
+        }
+
+        .tubers button {
+            background-color: lightseagreen;
+            padding: 10px;
+            border: solid 1px lightseagreen;
+            border-radius: 3px;
+            color: white;
+        }
+
+        /*Fruits*/
+        .fruits .title {
+            font-weight: bold;
+        }
+
+        .fruits .contact {
+            font-weight: bold;
+        }
+
+        .fruits .price {
+            text-align: right;
+        }
+
+        .fruits .column div {
+            width: 30%;
+            margin-right: 50px;
+        }
+
+        .fruits button {
+            background-color: lightseagreen;
+            padding: 10px;
+            border: solid 1px lightseagreen;
+            border-radius: 3px;
+            color: white;
+        }
     </style>
 </head>
-<header>
-    <div >
-        <nav id="navlink">
-            <ul class="navbar">
-                <li>
-                    <a href="farm2table.html">Home</a>
-                    </li>
-                <li>
-                    <a href="#grains">Grains</a>
-                </li>
-                <li>
-                    <a href="#vegetables">Vegetables</a>
-                </li>
-                <li>
-                    <a href="#tubers">Tubers</a>
-                </li>
-                <li>
-                    <a href="#fruits">Fruits</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    
+<header class="header">
+    <nav class="navbar">
+        <a href="welcome.html" class="logo-container"><img id="logo" class="logo" src="./Images/logo.png"
+                alt="farm2table_logo"></a>
+        <ul id="navlinks" class="navlinks">
+            <li class="navlink">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="navlink">
+                <a href="#grains">Grains</a>
+            </li>
+            <li class="navlink">
+                <a href="#vegatables">Vegetables</a>
+            </li>
+            <li class="navlink">
+                <a href="#fruits">Fruits</a>
+            </li>
+            <li class="navlink">
+                <a href="#tubers">Tubers</a>
+            </li>
+        </ul>
+        <span class="icon" id="click">
+            <i class="fas fa-bars"></i>
+        </span>
+    </nav>
 </header>
-<body>
-  <aside >
-          <img id="logo" src="https://s3.amazonaws.com/logosnap/logos/2021/Jun/original-4361-60be57aa58e79wm.png" alt="farm2table_logo">
-          <p id="slogan">The World's Farmacy</p>
-        </aside>
-        <h1>Our Products</h1><br>
-        <h3 id="grains"><strong>GRAINS</strong></h3>
-        <div class="grains">
-            <div>
-        <img  class="images" id="rice" width="200px" alt="rice" src="https://thumbs.dreamstime.com/z/rice-background-26152819.jpg">
-        <div class="column">
-        <div class="title">Rice</div>
-        <div class="quantity">20kg</div>
-        <div class="price">$150</div>
-       </div>
-        <div class="contact">Seller's contact: +234 812 9787 888</div>
-        <button data-order="rice">Order</button>
-    </div>
-        <div class="millet">
-        <img  class="images" id="millet" width="200px" alt="millet" src="https://media.gettyimages.com/photos/sorghum-linseed-and-lentils-in-bowls-picture-id969614488?s=612x612">
-        <div class="column">
-        <div class="title">Millet</div>
-        <div class="quantity">20kg</div>
-        <div class="price">$180</div>
-        </div>
-        <div class="contact">Seller's contact: +234 812 9787 888</div>
-        <button data-order="millet">Order</button>
-    </div>
-        <div class="maize">
-        <img  class="images" id="maize" width="200px" height="150px" alt="maize" src="https://image.freepik.com/free-photo/fresh-corn-cob-wicker-basket-untreated-corn-cobs-fresh-corn-vegetable-basket-harvested-corn-wicker-basket-freshly-picked-maize-ears-out-agricultural-field-landscape-selective_3435-1384.jpg">
-        <div class="column">
-        <div class="title">Maize</div>
-        <div class="quantity">20kg</div>
-        <div class="price">$100</div>
-        </div>
-        <div class="contact">Seller's contact: +234 812 9787 888</div>
-        <button data-order="maize">Order</button>
-    </div>
-        <div class="barley">
-        <img  class="images" id="barley" width="200px" alt="barley" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuKtsbQS51GN4gw1xW9J5I_U4_bvcqbzpK6pzL3oO__vvMK8ld8Ueyanhti27ybLbMvm8&usqp=CAU">
-        <div class="column">
-        <div class="title">Barley</div>
-        <div class="quantity">20kg</div>
-        <div class="price">$200</div>
-        </div>
-        <div class="contact">Seller's contact: +234 812 9787 888</div>
-        <button data-order="barley">Order</button>
-    </div>
-    </div>
- </section>
 
-       <h3 id="vegetables">VEGETABLES</h3>
-       <section class="column-desktop">
-       <div class="vegetables">
-           <div class="cucumber">
-        <img  class="images" id="cucumber" width="200px" alt="cucumber" src="https://image.shutterstock.com/image-photo/cucumbers-harvest-summer-fresh-pickle-260nw-1909071529.jpg">
-        <div class="column">
-        <div class="title">Cucumber</div>
-        <div class="quantity">1</div>
-        <div class="price">$20</div>
+<body>
+    <aside>
+        <img id="logo" src="https://s3.amazonaws.com/logosnap/logos/2021/Jun/original-4361-60be57aa58e79wm.png"
+            alt="farm2table_logo">
+        <p id="slogan">The World's Farmacy</p>
+    </aside>
+    <h1>Our Products</h1><br>
+    <h3 id="grains"><strong>GRAINS</strong></h3>
+    <div class="grains">
+        <div>
+            <img class="images" id="rice" width="200px" alt="rice"
+                src="https://thumbs.dreamstime.com/z/rice-background-26152819.jpg">
+            <div class="column">
+                <div class="title">Rice</div>
+                <div class="quantity">20kg</div>
+                <div class="price">$150</div>
+            </div>
+            <div class="contact">Seller's contact: +234 812 9787 888</div>
+            <button data-order="rice">Order</button>
         </div>
-        <div class="contact">Seller's contact: +234 812 9787 888</div>
-        <button id="button" onclick="btn()" data-order="cucumber">Order</button>
+        <div class="millet">
+            <img class="images" id="millet" width="200px" alt="millet"
+                src="https://media.gettyimages.com/photos/sorghum-linseed-and-lentils-in-bowls-picture-id969614488?s=612x612">
+            <div class="column">
+                <div class="title">Millet</div>
+                <div class="quantity">20kg</div>
+                <div class="price">$180</div>
+            </div>
+            <div class="contact">Seller's contact: +234 812 9787 888</div>
+            <button data-order="millet">Order</button>
+        </div>
+        <div class="maize">
+            <img class="images" id="maize" width="200px" height="150px" alt="maize"
+                src="https://image.freepik.com/free-photo/fresh-corn-cob-wicker-basket-untreated-corn-cobs-fresh-corn-vegetable-basket-harvested-corn-wicker-basket-freshly-picked-maize-ears-out-agricultural-field-landscape-selective_3435-1384.jpg">
+            <div class="column">
+                <div class="title">Maize</div>
+                <div class="quantity">20kg</div>
+                <div class="price">$100</div>
+            </div>
+            <div class="contact">Seller's contact: +234 812 9787 888</div>
+            <button data-order="maize">Order</button>
+        </div>
+        <div class="barley">
+            <img class="images" id="barley" width="200px" alt="barley"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuKtsbQS51GN4gw1xW9J5I_U4_bvcqbzpK6pzL3oO__vvMK8ld8Ueyanhti27ybLbMvm8&usqp=CAU">
+            <div class="column">
+                <div class="title">Barley</div>
+                <div class="quantity">20kg</div>
+                <div class="price">$200</div>
+            </div>
+            <div class="contact">Seller's contact: +234 812 9787 888</div>
+            <button data-order="barley">Order</button>
+        </div>
     </div>
-        <div class="carrots">
-        <img  class="images" id="carrots" width="200px" height="150px" alt="carrots" src="https://image.shutterstock.com/image-photo/harvesting-carrots-fresh-carrot-black-260nw-1543392086.jpg">
-        <div class="column">
-        <div class="title">Carrots</div>
-        <div class="quantity">5kg</div>
-        <div class="price">$80</div>
-        </div>
-        <div class="contact">Seller's contact: +234 812 9787 888</div>
-        <button id="button" onclick="btn()" data-order="carrots">Order</button>
-     </div>
-        <div class="spinach">
-        <img  class="images" id="spinach" width="200px" alt="spinach" src="https://image.shutterstock.com/image-photo/fresh-harvested-organic-spinach-on-260nw-1426793816.jpg">
-        <div class="column">
-        <div class="title">Spinach</div>
-        <div class="quantity">5kg</div>
-        <div class="price">$50</div>
-        </div>
-        <div class="contact">Seller's contact: +234 812 9787 888</div>
-        <button id="button" onclick="btn()" data-order="carrots">Order</button>
-        </a>
-    </div>
-        <div class="tomatoes">
-        <img  class="images" id="tomatoes" width="200px" alt="tomatoes" src="https://thumbs.dreamstime.com/b/tomatoes-boxes-freshly-harvested-tomatoes-farm-market-cherry-tomatoes-farm-market-tomatoes-boxes-113940063.jpg">
-        <div class="column">
-        <div class="title">Tomatoes</div>
-        <div class="quantity">10kg</div>
-        <div class="price">$100</div>
-        </div>
-        <div class="contact">Seller's contact: +234 812 9787 888</div>
-        <button id="button" onclick="btn()" data-order="tomatoes">Order</button>
-    </div> 
-    </div>
-</section>
+
+    <div>
+        <h3 id="vegetables">VEGETABLES</h3>
+        <section class="column-desktop">
+            <div class="vegetables">
+                <div class="cucumber">
+                    <img class="images" id="cucumber" width="200px" alt="cucumber"
+                        src="https://image.shutterstock.com/image-photo/cucumbers-harvest-summer-fresh-pickle-260nw-1909071529.jpg">
+                    <div class="column">
+                        <div class="title">Cucumber</div>
+                        <div class="quantity">1</div>
+                        <div class="price">$20</div>
+                    </div>
+                    <div class="contact">Seller's contact: +234 812 9787 888</div>
+                    <button id="button" onclick="btn()" data-order="cucumber">Order</button>
+                </div>
+                <div class="carrots">
+                    <img class="images" id="carrots" width="200px" height="150px" alt="carrots"
+                        src="https://image.shutterstock.com/image-photo/harvesting-carrots-fresh-carrot-black-260nw-1543392086.jpg">
+                    <div class="column">
+                        <div class="title">Carrots</div>
+                        <div class="quantity">5kg</div>
+                        <div class="price">$80</div>
+                    </div>
+                    <div class="contact">Seller's contact: +234 812 9787 888</div>
+                    <button id="button" onclick="btn()" data-order="carrots">Order</button>
+                </div>
+                <div class="spinach">
+                    <img class="images" id="spinach" width="200px" alt="spinach"
+                        src="https://image.shutterstock.com/image-photo/fresh-harvested-organic-spinach-on-260nw-1426793816.jpg">
+                    <div class="column">
+                        <div class="title">Spinach</div>
+                        <div class="quantity">5kg</div>
+                        <div class="price">$50</div>
+                    </div>
+                    <div class="contact">Seller's contact: +234 812 9787 888</div>
+                    <button id="button" onclick="btn()" data-order="carrots">Order</button>
+                    </a>
+                </div>
+                <div class="tomatoes">
+                    <img class="images" id="tomatoes" width="200px" alt="tomatoes"
+                        src="https://thumbs.dreamstime.com/b/tomatoes-boxes-freshly-harvested-tomatoes-farm-market-cherry-tomatoes-farm-market-tomatoes-boxes-113940063.jpg">
+                    <div class="column">
+                        <div class="title">Tomatoes</div>
+                        <div class="quantity">10kg</div>
+                        <div class="price">$100</div>
+                    </div>
+                    <div class="contact">Seller's contact: +234 812 9787 888</div>
+                    <button id="button" onclick="btn()" data-order="tomatoes">Order</button>
+                </div>
+            </div>
+        </section>
 
         <h3 id="tubers">TUBER</h3>
         <section class="column-desktop">
-        <div class="tubers">
-         <!--  <div class="yams">
-        <img id="yams" width="200px" alt="yams" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4OQMnQkqsIvc-LCxt3MZ5RkcigRBSOzFaRg&usqp=CAU">
-        <div class="column">
-        <div class="title">Yams</div>
-        <div class="quantity"2kg</div>
-        <div class="price">$30</div>
-       </div>
-       <div class="contact">Seller's contact: +234 812 9787 888</div>
-        <button data-order="yams">Order</button>
-        </div>-->
-       <div class="potatoes">
-        <img  class="images" id="potatoes" width="300px" height="200px" alt="potatoes" src="https://cdn.diyncrafts.com/wp-content/uploads/2021/03/featured-6-Helpful-Tips-for-Storing-Potatoes.jpg">
-        <div class="column">
-        <div class="title">Potatoes</div>
-        <div class="quantity">5kg</div>
-        <div class="price">$80</div>
-        </div>
-        <div class="contact">Seller's contact: +234 812 9787 888</div>
-        <button id="button" onclick="btn()" data-order="potatoes">Order</button>
-    </div>
-        <div class="cassava">
-        <img  class="images" id="cassava" width="300px" height="200px" alt="cassava" src="https://thumbs.dreamstime.com/b/freshly-harvested-organic-cassava-roots-market-food-healthy-164485596.jpg">
-        <div class="column">
-        <div class="title">Cassava</div>
-        <div class="quantity">10kg</div>
-        <div class="price">$70</div>
-        </div>
-        <div class="contact">Seller's contact: +234 812 9787 888</div>
-        <button id="button" onclick="btn()" data-order="cassava">Order</button>
-    </div>
-       
-    </div>
-</section>
+            <div class="tubers">
+                <div class="potatoes">
+                    <img class="images" id="potatoes" width="300px" height="200px" alt="potatoes"
+                        src="https://cdn.diyncrafts.com/wp-content/uploads/2021/03/featured-6-Helpful-Tips-for-Storing-Potatoes.jpg">
+                    <div class="column">
+                        <div class="title">Potatoes</div>
+                        <div class="quantity">5kg</div>
+                        <div class="price">$80</div>
+                    </div>
+                    <div class="contact">Seller's contact: +234 812 9787 888</div>
+                    <button id="button" onclick="btn()" data-order="potatoes">Order</button>
+                </div>
+                <div class="cassava">
+                    <img class="images" id="cassava" width="300px" height="200px" alt="cassava"
+                        src="https://thumbs.dreamstime.com/b/freshly-harvested-organic-cassava-roots-market-food-healthy-164485596.jpg">
+                    <div class="column">
+                        <div class="title">Cassava</div>
+                        <div class="quantity">10kg</div>
+                        <div class="price">$70</div>
+                    </div>
+                    <div class="contact">Seller's contact: +234 812 9787 888</div>
+                    <button id="button" onclick="btn()" data-order="cassava">Order</button>
+                </div>
+
+            </div>
+        </section>
 
         <h3 id="fruits">FRUITS</h3>
         <section class="column-desktop">
-        <div class="fruits">
-            <div class="bananas">
-        <img  class="images" id= "bananas" width="200px" height="150px" alt="bananas" src="https://media.istockphoto.com/photos/banana-bunch-on-the-wooden-table-picture-id925190686?k=6&m=925190686&s=612x612&w=0&h=ANIxYjeCQV8ronqtdhtbvB6FD0h2BrnrDLYSjoTbSxo=">
-        <div class="column">
-        <div class="title">Bananas</div>
-        <div class="quantity">1 Bunch</div>
-        <div class="price">$50</div>
-        </div>
-        <div class="contact">Seller's contact: +234 812 9787 888</div>
-        <button id="button" onclick="btn()" data-order="bananas">Order</button>
-    </div>
-        <div class="oranges">
-        <img  class="images" id="oranges" width="200px" height="150px" alt="oranges" src="https://c8.alamy.com/comp/HWKCGC/many-oranges-with-leaf-freshly-picked-during-the-harvest-in-the-mediterranean-HWKCGC.jpg">
-        <div class="column">
-        <div class="title">Oranges</div>
-        <div class="quantity">1 Basket</div>
-        <div class="price">$100</div>
-        </div>
-        <div class="contact">Seller's contact: +234 812 9787 888</div>
-        <button id="button" onclick="btn()" data-order="oranges">Order</button>
-    </div>
-       <div class="pineapples">
-        <img  class="images" id="pineapples" width="200px" height="150px"  alt="pineapples" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCQJZgP9YN1Uvy9kjkYfduDjdnTCmU16Q6bA&usqp=CAU">
-        <div class="column">
-        <div class="title">Pineapples</div>
-        <div class="quantity">10kg</div>
-        <div class="price">$200</div>
-        </div>
-        <div class="contact">Seller's contact: +234 812 9787 888</div>
-        <button id="button" onclick="btn()" data-order="pineapples">Order</button>
-    </div>
-        <div>
-        <img class="images" id="apples" width="200px" height="150px"  alt="apples" src="https://cdn.pixabay.com/photo/2020/12/12/20/58/freshly-picked-apples-5826604_1280.jpg">
-        <div class="column">
-        <div class="title">Apples</div>
-        <div class="quantity">1 Crate</div>
-        <div class="price">$200</div>
-        </div>
-        <div class="contact">Seller's contact: +234 812 9787 888</div>
-        <button id="button"  data-order="apples">Order</button>
-    </div>
-    </div>
-</section>
+            <div class="fruits">
+                <div class="bananas">
+                    <img class="images" id="bananas" width="200px" height="150px" alt="bananas"
+                        src="https://media.istockphoto.com/photos/banana-bunch-on-the-wooden-table-picture-id925190686?k=6&m=925190686&s=612x612&w=0&h=ANIxYjeCQV8ronqtdhtbvB6FD0h2BrnrDLYSjoTbSxo=">
+                    <div class="column">
+                        <div class="title">Bananas</div>
+                        <div class="quantity">1 Bunch</div>
+                        <div class="price">$50</div>
+                    </div>
+                    <div class="contact">Seller's contact: +234 812 9787 888</div>
+                    <button id="button" onclick="btn()" data-order="bananas">Order</button>
+                </div>
+                <div class="oranges">
+                    <img class="images" id="oranges" width="200px" height="150px" alt="oranges"
+                        src="https://c8.alamy.com/comp/HWKCGC/many-oranges-with-leaf-freshly-picked-during-the-harvest-in-the-mediterranean-HWKCGC.jpg">
+                    <div class="column">
+                        <div class="title">Oranges</div>
+                        <div class="quantity">1 Basket</div>
+                        <div class="price">$100</div>
+                    </div>
+                    <div class="contact">Seller's contact: +234 812 9787 888</div>
+                    <button id="button" onclick="btn()" data-order="oranges">Order</button>
+                </div>
+                <div class="pineapples">
+                    <img class="images" id="pineapples" width="200px" height="150px" alt="pineapples"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCQJZgP9YN1Uvy9kjkYfduDjdnTCmU16Q6bA&usqp=CAU">
+                    <div class="column">
+                        <div class="title">Pineapples</div>
+                        <div class="quantity">10kg</div>
+                        <div class="price">$200</div>
+                    </div>
+                    <div class="contact">Seller's contact: +234 812 9787 888</div>
+                    <button id="button" onclick="btn()" data-order="pineapples">Order</button>
+                </div>
+                <div>
+                    <img class="images" id="apples" width="200px" height="150px" alt="apples"
+                        src="https://cdn.pixabay.com/photo/2020/12/12/20/58/freshly-picked-apples-5826604_1280.jpg">
+                    <div class="column">
+                        <div class="title">Apples</div>
+                        <div class="quantity">1 Crate</div>
+                        <div class="price">$200</div>
+                    </div>
+                    <div class="contact">Seller's contact: +234 812 9787 888</div>
+                    <button id="button" data-order="apples">Order</button>
+                </div>
+            </div>
+        </section>
 </body>
 <script>
-    
-    window.addEventListener("DOMContentLoaded", function(e){
+
+    window.addEventListener("DOMContentLoaded", function (e) {
         const orderButtons = document.querySelectorAll("button[data-order]");
-        orderButtons.forEach(function(button) {
-            button.addEventListener("click", function(e) {
+        orderButtons.forEach(function (button) {
+            button.addEventListener("click", function (e) {
                 const button = e.currentTarget;
                 const container = button.parentNode;
                 const order = {
@@ -384,34 +426,18 @@
                     contact: container.querySelector(".contact").innerText
                 };
                 localStorage.setItem("order", JSON.stringify(order));
-                const url =window.location.href.replace("buynow.html", "order.html");
-                window.location.href= url;
+                const url = window.location.href.replace("buynow.html", "order.html");
+                window.location.href = url;
             });
         });
     });
 </script>
 <footer>
-  <div >
-    <nav id="navlink">
-        <ul class="navbar">
-            <li>
-                <a href="#grains">Welcome</a>
-            </li>
-            <li>
-                <a href="#vegetables">About</a>
-            </li>
-            <li>
-                <a href="#tubers">General Market</a>
-            </li>
-            <li>
-                <a href="#fruits">Join Us</a>
-            </li>
-        </ul>
-    </nav><br>
-</div>
-<p style="text-align: center;">You can contact us at <br>Tel.No: +254 456 7683 388596.<br>Address: Head Office at 9. Freedom Park, Gigiri, Nairobi, Kenya; Branch Office at 10, Allen Avenue, Ikeja, Lagos.
-</p>
+    <p class="footer-text">You can contact us at <br>Tel.No: +254 456 7683 388596.<br>Address: Head Office at 9.
+        Freedom Park, Gigiri, Nairobi, Kenya; <br>Branch Office at 10, Allen Avenue, Ikeja, Lagos.
+    </p>
 
-  <a id="logodesign" href=null>Logo source Logodesign.net</a>
+    <span id="logodesign">Programming queens-Team - Copyright &copy; 2021</span>
 </footer>
+
 </html>

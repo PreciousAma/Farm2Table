@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+/* utilities */
+.display {
+    display: block !important;
+}
+
 
 body{
     background-color: lavender;
@@ -9,11 +14,10 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-header {
+.header {
     position: sticky;
     top: 0;
     left: 0;
-    /* width: 100%; */
     background-color: rgb(39, 87, 39);
     padding: 10px;
     z-index: 1;
@@ -29,7 +33,6 @@ header {
  }
 
 .navbar {
-    overflow: hidden;
     position: relative;
 }
 
@@ -43,42 +46,37 @@ header {
 .navbar .icon {
     font-size: 20px;
     position: absolute;
-    top: -2px;
+    top: 5px;
     right: 0;
     color: #FFFFFF;
     z-index: 1000;
+    cursor: pointer;
 }
 
-#navlinks  {
+.navlinks  {
     display: none;
     list-style: none;
     text-align: center;
 }
 
-#navlinks .navlink {
+.navlinks .navlink {
     padding-top: 12px;
     padding-bottom: 12px;
 }
 
-#navlinks .navlink:not(:last-of-type) {
+.navlinks .navlink:not(:last-of-type) {
     border-bottom: 1px solid lavender;
 }
 
 
-/* .navbar .navlinks {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
+.main {
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-top: 40px;
+    line-height: 1.5;
+    color: forestgreen;
+    max-width: 1440px;
 }
-
-.navlinks li {
-    display: inline-block;
-    list-style: none;
-} */
-/* .navlinks > li:not(:last-child){
-    margin-right: 20px;
-} */
-
 
 .section-title {
     text-align: center;
@@ -88,12 +86,10 @@ header {
     text-align: center;
 }
 
-main {
-    padding-left: 24px;
-    padding-right: 24px;
-    margin-top: 40px;
-    line-height: 1.5;
-    color: forestgreen;
+.general-market {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container {
@@ -101,6 +97,7 @@ main {
     width: 100%;
     max-width: 1000px;
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 30px 0;
@@ -231,4 +228,42 @@ footer a:link {
       display:inline-block;
       font-size: 10px;
       margin-top: 10px;
+      align-self: center;
 }
+
+ /********MEDIA QUERY********/
+
+ /* Medium devices (tablets, 1024px and up) */
+ @media only screen and (min-width: 1024px) {
+
+    .header {
+        padding: 15px 10%;
+    }
+
+    .main {
+       padding-left: 10%;
+       padding-right: 10%; 
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navlinks {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end; 
+        border-bottom: 0;
+    }
+    .navlinks .navlink:not(:last-of-type) {
+        border-bottom: none;
+        margin-right: 40px;
+    }
+
+    .navbar .icon {
+        display: none;
+    }
+ }

@@ -40,9 +40,5 @@ function ftn1() {
   const navBar = document.getElementById("navlinks");
 
   navBtn.addEventListener("click", () => {
-    if (navBar.style.display === "block"){
-        navBar.style.display = "none"
-    } else {
-        navBar.style.display = "block";
-    }
+    navBar.classList.toggle("display")
   });
