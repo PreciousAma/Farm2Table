@@ -231,6 +231,87 @@ footer a:link {
       align-self: center;
 }
 
+
+/****************** 
+ Buy Now Page(style)
+********** ********/
+ /* grains */
+
+ .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 24px; 
+    padding-right: 24px;
+    margin-top: 30px;
+}
+
+.title {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    color: darkolivegreen;
+}
+
+
+.section .subtitle {
+    font-weight: bold;
+    color: darkolivegreen;
+}
+
+.card {
+     margin-top: 30px;
+     width: 100%;
+     max-width: 320px;
+     display: flex;
+     flex-direction: column;
+     background-color: #FFFFFF;
+     justify-content: center;
+     box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+     /* align-items: flex-start; */
+}
+
+.card .card-img-wrap {
+     flex-basis: 70%;
+
+ }
+
+.card .card-img {
+     width: 100%;
+     max-height: 239px;
+     /* height: auto; */
+     object-fit: cover;
+ }
+
+.card .card-text-wrap {
+    padding: 10px;
+    flex-basis: 30%;
+}
+.card-text-wrap .card-text {
+    color: forestgreen;
+    font-size: 16px;
+}
+
+.card-text-wrap .card-subtext {
+    font-size: 14px;
+}
+
+.card .contact {
+     margin-top: 5px;
+     font-size: 14px;
+}
+
+.card .order {
+    background-color: forestgreen;
+    padding: 8px 18px;
+    margin-top: 8px;
+    color: white;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
  /********MEDIA QUERY********/
 
  /* Medium devices (tablets, 1024px and up) */
@@ -266,4 +347,28 @@ footer a:link {
     .navbar .icon {
         display: none;
     }
- }
+}
+ 
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-left: 6%;
+        padding-right: 6%;
+        align-items: stretch;
+    }
+
+    .section .subtitle {
+        flex-basis: 100%;
+    }
+
+    .card .card-img {
+        height: 100%;
+    }
+
+    .card {
+        max-width: unset;
+    }
+}
