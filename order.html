@@ -1,139 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farm2Table</title>
-    <link rel="stylesheet" type="text/css" href="farm2table.css">
-    <style>
-      form {
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farm2Table</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css"
+    integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css"
+    integrity="sha512-jQqzj2vHVxA/yCojT8pVZjKGOe9UmoYvnOuM/2sQ110vxiajBU+4WkyRs1ODMmd4AfntwUEV4J+VfM6DkfjLRg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="farm2table.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      background-color: rgb(255, 255, 255);
+      color: #fff;
+      font-size: 18px;
+      border-radius: 25px;
+      text-align: center;
+      padding: 20px 10px;
+      max-width: 400px;
+      color: rgb(17, 17, 17);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container .option {
+      display: list-item;
+      margin-top: 10px;
+    }
+
+    .container input[type="checkbox"] {
+      margin-top: 10px;
+      padding: 5px;
+    }
+
+    h3 {
+      font-size: 24px;
+      color: forestgreen;
+      padding: 30px;
+    }
+
+    h3,
+    .checkbox,
+    button {
+      text-align: center;
+    }
+
+    .payment-method {
+      font-size: 18px;
+      padding-top: 20PX;
+      color: forestgreen;
+
+    }
+
+    .checkbox p {
+      font-size: 18px;
+      padding: 20px;
+      color: forestgreen;
+
+    }
+
+    .card-info {
+      font-size: 18px;
+      padding: 20px;
+      color: forestgreen;
+    }
+
+    .CVV {
+      padding-top: 20PX;
+    }
+
+    .logo-slogan {
+      display: inline-block;
+      font-size: 10px;
+      margin-top: 10px;
+    }
+
+    .container input {
+      height: 38px;
+      margin-top: 30px;
+      width: 90%;
+    }
+
+    button {
+      background-color: forestgreen;
+      margin-top: 20px;
+      color: rgb(255, 255, 255);
+      font-size: 20px;
+      border: none;
+      padding: 10px 40px;
+    }
+
+    footer {
+      background-color: rgb(39, 87, 39);
+      color: gainsboro;
+      margin-top: 50px;
+      padding: 20px 24px;
+    }
+
+    footer .footer-text {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    footer a:visited,
+    footer a:link {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* form {
         margin-top: 200px;
         margin-left: 400px;
+        
+      } */
+  </style>
+  <script>
+    var checkboxes = document.querySelectorAll("input[type=checkbox]");
+    var submit = document.getElementById("submit");
+
+    function getChecked() {
+      var checked = [];
+
+      for (var i = 0; i < checkboxes.length; i++) {
+        var checkbox = checkboxes[i];
+        if (checkbox.checked) checked.push(checkbox.value);
       }
-    </style>
-    <script>
-      var checkboxes = document.querySelectorAll("input[type=checkbox]");
-var submit = document.getElementById("submit");
 
-function getChecked() {
-  var checked = [];
+      return checked;
+    }
 
-  for (var i = 0; i < checkboxes.length; i++) {
-    var checkbox = checkboxes[i];
-    if (checkbox.checked) checked.push(checkbox.value);
-  }
+    submit.addEventListener("click", function () {
+      var checked = getChecked();
+      console.log(checked);
+    });
+    function validate() {
+      var name = document.getElementById("name");
+      var mail = document.getElementById("mail");
+      var password = document.getElementById("pass");
+      var address = document.getElementById("address");
 
-  return checked;
-}
-
-submit.addEventListener("click", function() {
-  var checked = getChecked();
-  console.log(checked);
-});
-       function validate() {
-         var name = document.getElementById("name");
-         var mail = document.getElementById("mail");
-         var password = document.getElementById("pass");
-         var address = document.getElementById("address");
-
-         if(name.value.trim()=="") {
-           alert("Name cannot be blank");
-           return false;
-         } else if(mail.value.trim()=="") {
-          alert("Mail cannot be blank");
-          return false;
-         } else if(password.value.trim().length<5) {
-          alert("Password is too short");
-          return false;
-         }else if(address.value=="") {
-           alert("Address is required");
-           return false;
-         }else {
-           return true;
-         }
-       }
+      if (name.value.trim() == "") {
+        alert("Name cannot be blank");
+        return false;
+      } else if (mail.value.trim() == "") {
+        alert("Mail cannot be blank");
+        return false;
+      } else if (password.value.trim().length < 5) {
+        alert("Password is too short");
+        return false;
+      } else if (address.value == "") {
+        alert("Address is required");
+        return false;
+      } else {
+        return true;
+      }
+    }
   </script>
 </head>
-<header>
-    <div >
-        <nav id="navlink">
-            <ul class="navbar">
-                <li>
-                    <a href="farm2table.html">Home</a>
-                </li>
-                <li>
-                  <a href="buynow.html">Buy Now</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    
-</header>
-<body>
-  <aside >
-          <img id="logo" src="https://s3.amazonaws.com/logosnap/logos/2021/Jun/original-4361-60be57aa58e79wm.png" alt="farm2table_logo">
-          <p id="slogan">The World's Farmacy</p>
-        </aside>
-   
-        <form   onsubmit="return validate()" action="welcome2.html">
-            <label for="name">Name(Surname first)</label>
-            <input id="name" type="text" placeholder="Enter Your Name"><br>
-            <label for="email">Email</label>
-            <input id="mail" type="email" placeholder="Enter your Email"><br>
-            <label for="address">Address</label>
-            <input id="address" type="adress" placeholder="Enter Your Address"><br>
-            <p>Choose Payment Method</p>
-            <select style="font-size: medium; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-              <option selected="selected" value="mastercard">Mastercard</option>
-              <option value="vervecard">Vervecard</option>
-              <option value="creditcard">Credit Card</option>
-            </select>
-            <label for="cardno">Card Number</label>
-            <input id="cardno" type="number" placeholder="XXXX XXXX XXXX XXXX" required><br>
-            <label for="cardno">CVV</label>
-            <input id="CVV" type="number" placeholder="XXX" required><br>
-     
-    <div class="checkbox">
-           <p class="checkbox"><strong>Which of our produce would you like to buy?</strong></p>
-           <label for="apples">Apples</label>
-            <input id="check" type="checkbox" value="apples" ><br>
-            <label for="bananas">Bananas</label>
-            <input id="check" type="checkbox" value="bananas"> <br>
-            <label for="barley">Barley</label>
-            <input id="check" type="checkbox" value="barley"><br>
-            <label for="carrots">Carrots</label>
-            <input id="check" type="checkbox" value="carrots">
-            <label for="cucumber">Cucumber</label>
-            <input id="check" type="checkbox" value="cucumber">
-            <label for="maize">Maize</label>
-            <input id="check" type="checkbox" value="maize">
-            <label for="millet">Millet</label>
-            <input id="check" type="checkbox" value="millet">
-            <label for="oranges">Oranges</label>
-            <input id="check" type="checkbox" value="orange">
-            <label for="pineapples">Pineapples</label>
-            <input id="check" type="checkbox" value="pineapples">
-            <label for="potatoes">Potatoes</label>
-            <input id="check" type="checkbox" value="potatoes">
-            <label for="rice">Rice</label>
-            <input id="check" type="checkbox" value="rice">
-            <label for="spinach">Spinach</label>
-            <input id="check" type="checkbox" value="spinach">
-            <label for="tomatoes">Tomatoes</label>
-            <input id="check" type="checkbox" value="tomatoes">
-    </div> 
-             <button onclick="return ftn1() "type="submit" id="submit"><strong>Submit</strong></button>
-        </form>
-       
-    </div>
-    </main>
-    
-</body>
-<footer>
-<p style="text-align: center;">You can contact us at <br>Tel.No: +254 456 7683 388596.<br>Address: Head Office at 9. Freedom Park, Gigiri, Nairobi, Kenya; Branch Office at 10, Allen Avenue, Ikeja, Lagos.
-</p>
 
-  <a id="logodesign" href=null>Logo source Logodesign.net</a>
-</footer>
+
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo-container"><img id="logo" class="logo" src="./Images/logo.png"
+          alt="farm2table_logo"></a>
+      <ul id="navlinks" class="navlinks">
+        <li class="navlink">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="navlink">
+          <a href="buynow.html">Buy Now</a>
+        </li>
+      </ul>
+      <span class="icon" id="click">
+        <i class="fas fa-bars"></i>
+      </span>
+    </nav>
+  </header>
+
+  <main>
+  <h3 class="choosepay">Confirm your payment</h3>
+
+  <div class="container">
+
+    <form onsubmit="return validate()" action="welcome2.html">
+      <!-- <label for="name">Name(Surname first)</label> -->
+      <input id="name" type="text" placeholder="Enter Your Name"><br>
+      <!-- <label for="email">Email</label> -->
+      <input id="mail" type="email" placeholder="Enter your Email"><br>
+      <!-- <label for="address">Address</label> -->
+      <input id="address" type="adress" placeholder="Enter Your Address">
+      <br>
+      <p class="payment-method"><strong>Choose Payment Method</strong> </p>
+
+      <div class="card-info">
+        <select
+          style="font-size: medium; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+          <option selected="selected" value="mastercard">Mastercard</option>
+          <option value="vervecard">Vervecard</option>
+          <option value="creditcard">Credit Card</option>
+        </select>
+      </div>
+
+      <div class="card-number">
+        <label for="cardno">Card Number</label>
+        <input id="cardno" type="number" placeholder="XXXX XXXX XXXX XXXX" required>
+      </div>
+      <div class="CVV">
+        <label for="cardno">CVV</label>
+        <input id="CVV" type="number" placeholder="XXX" required><br>
+      </div>
+
+
+      <!-- <div class="checkbox">
+        <p class="checkbox"><strong>Which of our produce would you like to buy?</strong></p>
+        <label for="apples">Apples</label>
+        <input id="check" type="checkbox" value="apples"><br>
+
+        <label for="bananas">Bananas</label>
+        <input id="check" type="checkbox" value="bananas"> <br>
+
+        <label for="barley">Barley</label>
+        <input id="check" type="checkbox" value="barley"><br>
+
+        <label for="carrots">Carrots</label>
+        <input id="check" type="checkbox" value="carrots"><br>
+
+        <label for="cucumber">Cucumber</label>
+        <input id="check" type="checkbox" value="cucumber"><br>
+
+        <label for="maize">Maize</label>
+        <input id="check" type="checkbox" value="maize"><br>
+
+        <label for="millet">Millet</label>
+        <input id="check" type="checkbox" value="millet"><br>
+
+        <label for="oranges">Oranges</label>
+        <input id="check" type="checkbox" value="orange"><br>
+
+        <label for="pineapples">Pineapples</label>
+        <input id="check" type="checkbox" value="pineapples"><br>
+
+        <label for="potatoes">Potatoes</label>
+        <input id="check" type="checkbox" value="potatoes"><br>
+
+        <!-- <label for="rice">Rice</label>
+            <input id="check" type="checkbox" value="rice"><br>
+             -->
+        <!-- <label for="spinach">Spinach</label>
+        <input id="check" type="checkbox" value="spinach"><br>
+
+        <label for="tomatoes">Tomatoes</label>
+        <input id="check" type="checkbox" value="tomatoes"><br>
+      </div> -->
+      <button onclick="return ftn1() " type="submit" id="submit"><strong>Submit</strong></button>
+    </form>
+  </div>
+  </main>
+  <footer>
+    <p class="footer-text">You can contact us at <br>Tel.No: +254 456 7683 388596.<br>Address: Head Office at 9.
+      Freedom Park, Gigiri, Nairobi, Kenya; <br>Branch Office at 10, Allen Avenue, Ikeja, Lagos.
+    </p>
+
+    <span id="logodesign">Programming queens-Team - Copyright &copy; 2021</span>
+  </footer>
+  <script type="text/javascript" src="./script.js"></script>
+</body>
+
 </html>

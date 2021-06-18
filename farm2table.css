@@ -80,6 +80,7 @@ body{
 
 .section-title {
     text-align: center;
+    scroll-margin-top: 100px;
 }
 
 .section-texts {
@@ -167,6 +168,8 @@ body{
     max-width: 400px;
     color: rgb(17, 17, 17);
     margin: 0 auto;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .form .text {
@@ -207,6 +210,7 @@ body{
       font-size: 20px;
       border: none;
       padding: 10px 40px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
  }
 footer {
       background-color: rgb(39, 87, 39);
@@ -257,9 +261,10 @@ footer a:link {
 .section .subtitle {
     font-weight: bold;
     color: darkolivegreen;
+    scroll-margin-top: 100px;
 }
 
-.card {
+.section .card {
      margin-top: 30px;
      width: 100%;
      max-width: 320px;
@@ -271,37 +276,36 @@ footer a:link {
      /* align-items: flex-start; */
 }
 
-.card .card-img-wrap {
+.section .card .card-img-wrap {
      flex-basis: 70%;
 
  }
 
-.card .card-img {
+.section .card .card-img {
      width: 100%;
      max-height: 239px;
-     /* height: auto; */
      object-fit: cover;
  }
 
-.card .card-text-wrap {
+.section .card .card-text-wrap {
     padding: 10px;
     flex-basis: 30%;
 }
-.card-text-wrap .card-text {
+.section .card-text-wrap .card-text {
     color: forestgreen;
     font-size: 16px;
 }
 
-.card-text-wrap .card-subtext {
+.section .card-text-wrap .card-subtext {
     font-size: 14px;
 }
 
-.card .contact {
+.section .card .contact {
      margin-top: 5px;
      font-size: 14px;
 }
 
-.card .order {
+.section .card .order {
     background-color: forestgreen;
     padding: 8px 18px;
     margin-top: 8px;
@@ -314,6 +318,37 @@ footer a:link {
 
  /********MEDIA QUERY********/
 
+ /* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .form {
+        padding-right: 6%;
+        padding-left: 6%;
+    }
+
+    .section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-left: 6%;
+        padding-right: 6%;
+        align-items: stretch;
+    }
+
+    .section .subtitle {
+        flex-basis: 100%;
+    }
+
+    .section .card .card-img {
+        height: 100%;
+    }
+
+    .section .card {
+        max-width: unset;
+        flex-basis: 48%;
+    }
+}
+
  /* Medium devices (tablets, 1024px and up) */
  @media only screen and (min-width: 1024px) {
 
@@ -324,6 +359,11 @@ footer a:link {
     .main {
        padding-left: 10%;
        padding-right: 10%; 
+    }
+    
+    .section {
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     .navbar {
@@ -348,27 +388,27 @@ footer a:link {
         display: none;
     }
 }
- 
-/* Medium devices (tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+
+
+/*large devices (desktop, 1280px and up) */
+@media only screen and (min-width: 1280px) {
+
+    .form {
+        padding-right: 4%;
+        padding-left: 4%;
+    }
+
     .section {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding-left: 6%;
-        padding-right: 6%;
-        align-items: stretch;
+        justify-content: flex-start;
+        margin-bottom: 60px;
+    }
+    .section .card {
+        flex-basis: 24%;
+        margin-right: 1%;
     }
 
-    .section .subtitle {
-        flex-basis: 100%;
-    }
-
-    .card .card-img {
-        height: 100%;
-    }
-
-    .card {
-        max-width: unset;
+    .section .card .card-img {
+        max-height: 210px;
     }
 }
+
